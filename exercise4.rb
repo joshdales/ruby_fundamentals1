@@ -32,5 +32,13 @@ else
 end
 
 secret_number = 789
-puts "Please pick a number"]
-is_it_my_number = gets
+puts "Please pick a number"
+is_it_my_number = gets.to_i
+
+if is_it_my_number == secret_number
+  puts "You win!"
+elsif (is_it_my_number == secret_number - 1) || (is_it_my_number == secret_number + 1)
+  puts "So close!"
+else
+  puts "Try again"
+end
