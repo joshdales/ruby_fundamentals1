@@ -2,7 +2,7 @@ distance = 0
 energy = 20
 
 
-puts "You are at home, about to try and run 50km\nIf you want to go home just say 'go home'\n"
+puts "You are at home, about to try and run 50km\nIf you want to go home just say 'go home'\nDon't forget to eat or eat if you get low on energy."
 
 while distance < 50
   puts "Would you like to walk or run?"
@@ -34,6 +34,9 @@ while distance < 50
   if choice == "eat"
     energy += 10
     puts "Yum!"
+  elsif choice == "rest"
+    energy += 10
+    puts "Take a breather."
   end
 
   if distance >= 50
