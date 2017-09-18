@@ -1,6 +1,8 @@
 distance = 0
+energy = 50
 
-puts "you are at home"
+
+puts "you are at home, about to go on a 100km run"
 puts "if you want to go home just say 'go home'"
 
 while distance < 100
@@ -8,13 +10,17 @@ while distance < 100
   choice = gets.chomp
   if choice == "run"
     distance += 5
+    energy -= 10
     puts "Distance from home is #{distance}"
   elsif choice == "walk"
     distance += 1
+    energy += 3
     puts "Distance from home is #{distance}"
+  elsif energy = 0
+    puts "you ran out of energy, you should walk or go home"
   end
   if choice == "go home"
-    puts "you ran the #{distance}km home"
-    distance = 1000
+    puts "you went the #{distance}km home"
+    break
   end
 end
