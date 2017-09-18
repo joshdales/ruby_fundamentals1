@@ -30,3 +30,7 @@ elsif user_name.length < 10
 else
   puts "hey #{user_name}"
 end
+
+secret_number = 789
+puts "Please pick a number"]
+is_it_my_number = gets
